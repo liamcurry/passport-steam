@@ -1,0 +1,16 @@
+{
+  "name": "passport-google",
+  "version": "0.1.0",
+  "description": "Google authentication strategy for Passport.",
+  "author": "Jared Hanson <jaredhanson@gmail.com> (http://www.jaredhanson.net/)",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/jaredhanson/passport-google.git"
+  },
+  "main": "./lib/passport-google",
+  "dependencies": {
+    "passport-openid": ">= 0.1.1"
+  },
+  "engines": { "node": ">= 0.4.0" },
+  "keywords": ["passport", "google", "auth", "authn", "authentication", "identity"]
+}
