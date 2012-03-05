@@ -1,16 +1,30 @@
 {
   "name": "passport-google",
   "version": "0.1.0",
-  "description": "Google authentication strategy for Passport.",
-  "author": "Jared Hanson <jaredhanson@gmail.com> (http://www.jaredhanson.net/)",
+  "description": "Google (OpenID) authentication strategy for Passport.",
+  "author": { "name": "Jared Hanson", "email": "jaredhanson@gmail.com", "url": "http://www.jaredhanson.net/" },
   "repository": {
     "type": "git",
-    "url": "http://github.com/jaredhanson/passport-google.git"
+    "url": "git://github.com/jaredhanson/passport-google.git"
+  },
+  "bugs": {
+    "url": "http://github.com/jaredhanson/passport-google/issues"
   },
   "main": "./lib/passport-google",
   "dependencies": {
-    "passport-openid": ">= 0.1.1"
+    "pkginfo": "0.2.x",
+    "passport-openid": "~0.1.2"
+  },
+  "devDependencies": {
+    "vows": "0.6.x"
+  },
+  "scripts": {
+    "test": "NODE_PATH=lib node_modules/.bin/vows test/*-test.js"
   },
   "engines": { "node": ">= 0.4.0" },
+  "licenses": [ {
+    "type": "MIT",
+    "url": "http://www.opensource.org/licenses/MIT" 
+  } ],
   "keywords": ["passport", "google", "auth", "authn", "authentication", "identity"]
 }

@@ -1,5 +1,5 @@
 NODE = node
-TEST = vows
+TEST = ./node_modules/.bin/vows
 TESTS ?= test/*-test.js
 
 test:
@@ -10,7 +10,7 @@ docs: docs/api.html
 docs/api.html: lib/passport-google/*.js
 	dox \
 		--title Passport-Google \
-		--desc "Google authentication strategy for Passport" \
+		--desc "Google (OpenID) authentication strategy for Passport" \
 		$(shell find lib/passport-google/* -type f) > $@
 
 docclean:

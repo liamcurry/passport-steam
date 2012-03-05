@@ -49,9 +49,16 @@ application:
         res.redirect('/');
       });
 
-#### Examples
+## Examples
 
 For a complete, working example, refer to the [signon example](https://github.com/jaredhanson/passport-google/tree/master/examples/signon).
+
+## Tests
+
+    $ npm install --dev
+    $ make test
+
+[![Build Status](https://secure.travis-ci.org/jaredhanson/passport-google.png)](http://travis-ci.org/jaredhanson/passport-google)
 
 ## Credits
 
