@@ -4,6 +4,7 @@
 with [Steam](http://www.steam.com/) using OpenID 2.0. This was mostly copied
 and pasted from passport-google, so don't blame me if things break.
 
+
 ## Installation
 
     $ npm install passport-steam
