@@ -2,13 +2,13 @@
   "name": "passport-steam",
   "version": "0.1.1",
   "description": "Steam (OpenID) authentication strategy for Passport.",
-  "author": { "name": "Jared Hanson", "email": "jaredhanson@gmail.com", "url": "http://www.jaredhanson.net/" },
+  "author": { "name": "Liam Curry", "email": "liam@curry.name", "url": "http://www.liamcurry.com/" },
   "repository": {
     "type": "git",
-    "url": "git://github.com/jaredhanson/passport-steam.git"
+    "url": "git://github.com/liamcurry/passport-steam.git"
   },
   "bugs": {
-    "url": "http://github.com/jaredhanson/passport-steam/issues"
+    "url": "http://github.com/liamcurry/passport-steam/issues"
   },
   "main": "./lib/passport-steam",
   "dependencies": {
