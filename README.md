@@ -1,23 +1,24 @@
-# Passport-Google
+# Passport-Steam
 
 [Passport](https://github.com/jaredhanson/passport) strategy for authenticating
-with [Google](http://www.google.com/) using OpenID 2.0.
+with [Steam](http://www.steam.com/) using OpenID 2.0. This was mostly copied
+and pasted from passport-google, so don't blame me if things break.
 
 ## Installation
 
-    $ npm install passport-google
+    $ npm install passport-steam
 
 ## Usage
 
 #### Configure Strategy
 
-The Google authentication strategy authenticates users using a Google account,
+The Steam authentication strategy authenticates users using a steam account,
 which is also an OpenID 2.0 identifier.  The strategy requires a `validate`
 callback, which accepts this identifier and calls `done` providing a user.
 Additionally, options can be supplied to specify a return URL and realm.
 
-    passport.use(new GoogleStrategy({
-        returnURL: 'http://localhost:3000/auth/google/return',
+    passport.use(new SteamStrategy({
+        returnURL: 'http://localhost:3000/auth/steam/return',
         realm: 'http://localhost:3000/'
       },
       function(identifier, done) {
@@ -29,21 +30,21 @@ Additionally, options can be supplied to specify a return URL and realm.
 
 #### Authenticate Requests
 
-Use `passport.authenticate()`, specifying the `'google'` strategy, to
+Use `passport.authenticate()`, specifying the `'steam'` strategy, to
 authenticate requests.
 
 For example, as route middleware in an [Express](http://expressjs.com/)
 application:
 
-    app.get('/auth/google',
-      passport.authenticate('google'),
+    app.get('/auth/steam',
+      passport.authenticate('steam'),
       function(req, res){
-        // The request will be redirected to Google for authentication, so
+        // The request will be redirected to Steam for authentication, so
         // this function will not be called.
       });
 
-    app.get('/auth/google/callback', 
-      passport.authenticate('google', { failureRedirect: '/login' }),
+    app.get('/auth/steam/callback',
+      passport.authenticate('steam', { failureRedirect: '/login' }),
       function(req, res) {
         // Successful authentication, redirect home.
         res.redirect('/');
@@ -51,14 +52,14 @@ application:
 
 ## Examples
 
-For a complete, working example, refer to the [signon example](https://github.com/jaredhanson/passport-google/tree/master/examples/signon).
+For a complete, working example, refer to the [signon example](https://github.com/liamcurry/passport-steam/tree/master/examples/signon).
 
 ## Tests
 
     $ npm install --dev
     $ make test
 
-[![Build Status](https://secure.travis-ci.org/jaredhanson/passport-google.png)](http://travis-ci.org/jaredhanson/passport-google)
+[![Build Status](https://secure.travis-ci.org/liamcurry/passport-steam.png)](http://travis-ci.org/liamcurry/passport-liamcurry)
 
 ## Credits
 

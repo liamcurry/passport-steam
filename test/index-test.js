@@ -1,15 +1,15 @@
 var vows = require('vows');
 var assert = require('assert');
 var util = require('util');
-var google = require('passport-google');
+var steam = require('passport-steam');
 
 
-vows.describe('passport-google').addBatch({
-  
+vows.describe('passport-steam').addBatch({
+
   'module': {
     'should report a version': function (x) {
-      assert.isString(google.version);
+      assert.isString(steam.version);
     },
   },
-  
+
 }).export(module);

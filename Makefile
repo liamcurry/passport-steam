@@ -7,11 +7,11 @@ test:
 
 docs: docs/api.html
 
-docs/api.html: lib/passport-google/*.js
+docs/api.html: lib/passport-steam/*.js
 	dox \
-		--title Passport-Google \
-		--desc "Google (OpenID) authentication strategy for Passport" \
-		$(shell find lib/passport-google/* -type f) > $@
+		--title Passport-Steam \
+		--desc "Steam (OpenID) authentication strategy for Passport" \
+		$(shell find lib/passport-steam/* -type f) > $@
 
 docclean:
 	rm -f docs/*.{1,html}
