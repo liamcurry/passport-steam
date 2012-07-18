@@ -12,8 +12,8 @@
   },
   "main": "./lib/passport-steam",
   "dependencies": {
-    "pkginfo": "0.2.x",
-    "passport-openid": "~0.2.3"
+    "pkginfo": "*",
+    "passport-openid": "*"
   },
   "devDependencies": {
     "vows": "0.6.x"
