@@ -1,7 +1,7 @@
 # Passport-Steam
 
 [Passport](https://github.com/jaredhanson/passport) strategy for authenticating
-with [Steam](http://www.steam.com/) using OpenID 2.0. This was mostly copied
+with [Steam](http://steamcommunity.com/) using OpenID 2.0. This was mostly copied
 and pasted from passport-google, so don't blame me if things break.
 
 
