@@ -66,9 +66,10 @@ For a complete, working example, refer to the [signon example](https://github.co
 
 [![Build Status](https://secure.travis-ci.org/liamcurry/passport-steam.png)](http://travis-ci.org/liamcurry/passport-liamcurry)
 
-## Credits
+## Contributors
 
   - [Jared Hanson](http://github.com/jaredhanson)
+  - [elisee](https://github.com/elisee)
 
 ## License
 
