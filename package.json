@@ -14,7 +14,7 @@
   "dependencies": {
     "pkginfo": "*",
     "passport-openid": "*",
-    "steam-web": "~0.2.1"
+    "steam-web": "~0.2.4"
   },
   "devDependencies": {
     "vows": "0.6.x"
