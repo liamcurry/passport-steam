@@ -13,7 +13,7 @@
   "main": "./lib/passport-steam",
   "dependencies": {
     "pkginfo": "*",
-    "passport-openid": "git://github.com:mshi/passport-openid.git",
+    "passport-openid": "git://github.com/mshi/passport-openid.git",
     "steam-web": "~0.2.4"
   },
   "devDependencies": {
