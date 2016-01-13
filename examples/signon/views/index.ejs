@@ -1,5 +1,10 @@
 <% if (!user) { %>
 	<h2>Welcome! Please log in.</h2>
+	<p><a href="auth/steam">Sign On with Steam</a></p>
 <% } else { %>
-	<h2>Hello, <%= user.identifier %>.</h2>
+	<h2>Hello, <%= user.displayName %>. - <a href='logout'>Logout</a></h2>
 <% } %>
+
+<!-- Should redirect to homepage if you're not logged in -->
+<p><a href="account">See Account Information</a></p>
+

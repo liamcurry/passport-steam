@@ -1,8 +1,8 @@
 var express = require('express')
   , passport = require('passport')
   , util = require('util')
-  , SteamStrategy = require('../../lib/passport-steam').Strategy;
-
+  , session = require('express-session')
+  , SteamStrategy = require('passport-steam').Strategy;
 
 // Passport session setup.
 //   To support persistent login sessions, Passport needs to be able to
@@ -19,14 +19,14 @@ passport.deserializeUser(function(obj, done) {
   done(null, obj);
 });
 
-
 // Use the SteamStrategy within Passport.
 //   Strategies in passport require a `validate` function, which accept
 //   credentials (in this case, an OpenID identifier and profile), and invoke a
 //   callback with a user object.
 passport.use(new SteamStrategy({
     returnURL: 'http://localhost:3000/auth/steam/return',
-    realm: 'http://localhost:3000/'
+    realm: 'http://localhost:3000/',
+    apiKey: 'Your API key here'
   },
   function(identifier, profile, done) {
     // asynchronous verification, for effect...
@@ -42,28 +42,23 @@ passport.use(new SteamStrategy({
   }
 ));
 
-
-
-
-var app = express.createServer();
+var app = express();
 
 // configure Express
-app.configure(function() {
-  app.set('views', __dirname + '/views');
-  app.set('view engine', 'ejs');
-  app.use(express.logger());
-  app.use(express.cookieParser());
-  app.use(express.bodyParser());
-  app.use(express.methodOverride());
-  app.use(express.session({ secret: 'keyboard cat' }));
-  // Initialize Passport!  Also use passport.session() middleware, to support
-  // persistent login sessions (recommended).
-  app.use(passport.initialize());
-  app.use(passport.session());
-  app.use(app.router);
-  app.use(express.static(__dirname + '/../../public'));
-});
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs');
 
+app.use(session({
+    secret: 'your secret',
+    name: 'name of session id',
+    resave: true,
+    saveUninitialized: true}));
+
+// Initialize Passport!  Also use passport.session() middleware, to support
+// persistent login sessions (recommended).
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(express.static(__dirname + '/../../public'));
 
 app.get('/', function(req, res){
   res.render('index', { user: req.user });
@@ -73,8 +68,9 @@ app.get('/account', ensureAuthenticated, function(req, res){
   res.render('account', { user: req.user });
 });
 
-app.get('/login', function(req, res){
-  res.render('login', { user: req.user });
+app.get('/logout', function(req, res){
+  req.logout();
+  res.redirect('/');
 });
 
 // GET /auth/steam
@@ -83,7 +79,7 @@ app.get('/login', function(req, res){
 //   the user to steam.com.  After authenticating, Steam will redirect the
 //   user back to this application at /auth/steam/return
 app.get('/auth/steam',
-  passport.authenticate('steam', { failureRedirect: '/login' }),
+  passport.authenticate('steam', { failureRedirect: '/' }),
   function(req, res) {
     res.redirect('/');
   });
@@ -94,18 +90,12 @@ app.get('/auth/steam',
 //   login page.  Otherwise, the primary route function function will be called,
 //   which, in this example, will redirect the user to the home page.
 app.get('/auth/steam/return',
-  passport.authenticate('steam', { failureRedirect: '/login' }),
+  passport.authenticate('steam', { failureRedirect: '/' }),
   function(req, res) {
     res.redirect('/');
   });
 
-app.get('/logout', function(req, res){
-  req.logout();
-  res.redirect('/');
-});
-
 app.listen(3000);
-
 
 // Simple route middleware to ensure user is authenticated.
 //   Use this route middleware on any resource that needs to be protected.  If
@@ -114,5 +104,5 @@ app.listen(3000);
 //   login page.
 function ensureAuthenticated(req, res, next) {
   if (req.isAuthenticated()) { return next(); }
-  res.redirect('/login')
+  res.redirect('/');
 }
