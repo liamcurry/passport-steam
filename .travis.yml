@@ -1,5 +1,11 @@
 language: "node_js"
+
 node_js:
-  - 0.4
-  - 0.6
-  - 0.8
+  - "5.4.1"
+  - "4.2.4"
+  - "0.8"
+
+deploy:
+  provider: npm
+  //Add via `travis encrypt YOUR_API_KEY --add deploy.api_key`
+  api_key: ""
