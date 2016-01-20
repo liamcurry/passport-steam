@@ -2,7 +2,11 @@
   "name": "passport-steam",
   "version": "0.1.7",
   "description": "Steam (OpenID) authentication strategy for Passport.",
-  "author": { "name": "Liam Curry", "email": "liam@curry.name", "url": "http://www.liamcurry.com/" },
+  "author": {
+    "name": "Liam Curry",
+    "email": "liam@curry.name",
+    "url": "http://www.liamcurry.com/"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/liamcurry/passport-steam.git"
@@ -17,15 +21,26 @@
     "steam-web": "~0.2.4"
   },
   "devDependencies": {
-    "vows": "0.6.x"
+    "ava": "^0.10.0"
   },
   "scripts": {
-    "test": "NODE_PATH=lib node_modules/.bin/vows test/*-test.js"
+    "test": "ava test/*.test.js"
   },
-  "engines": { "node": ">= 0.4.0" },
-  "licenses": [ {
-    "type": "MIT",
-    "url": "http://www.opensource.org/licenses/MIT"
-  } ],
-  "keywords": ["passport", "steam", "auth", "authn", "authentication", "identity"]
+  "engines": {
+    "node": ">= 0.4.0"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
+  "keywords": [
+    "passport",
+    "steam",
+    "auth",
+    "authn",
+    "authentication",
+    "identity"
+  ]
 }
