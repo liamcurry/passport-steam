@@ -7,6 +7,17 @@
     "email": "liam@curry.name",
     "url": "http://www.liamcurry.com/"
   },
+  "contributors": [
+    {
+      "name": "Toby Archer",
+      "email": "toby@nerdping.com",
+      "url": "http://github.com/mnzt"
+    },
+    {
+      "name": "Welps",
+      "url": "https://github.com/welps"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/liamcurry/passport-steam.git"
