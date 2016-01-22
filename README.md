@@ -1,13 +1,12 @@
 # Passport-Steam
 
 [Passport](https://github.com/jaredhanson/passport) strategy for authenticating
-with [Steam](http://steamcommunity.com/) using OpenID 2.0. This was mostly copied
-and pasted from passport-google, so don't blame me if things break.
+with [Steam](http://steamcommunity.com/) using OpenID 2.0.
 
 
 ## Installation
 
-    $ npm install passport-steam
+    $ npm install --save passport-steam
 
 ## Usage
 
@@ -30,8 +29,7 @@ Additionally, options can be supplied to specify a return URL and realm.
       }
     ));
 
-A Steam API key can be obtained at http://steamcommunity.com/dev/apikey. You
-can use the strategy without a key if you pass ``profile: false`` instead.
+A Steam API key can be obtained at http://steamcommunity.com/dev/apikey. However if you wish not to use an API key, you can include `profile: false` into the SteamStrategy object, which will disable the fetching of user data.
 
 #### Authenticate Requests
 
@@ -61,15 +59,20 @@ For a complete, working example, refer to the [signon example](https://github.co
 
 ## Tests
 
-    $ npm install --dev
-    $ make test
+If you would like to contribute, please provide accompanying tests with [AVA](https://github.com/sindresorhus/ava)
 
-[![Build Status](https://secure.travis-ci.org/liamcurry/passport-steam.png)](http://travis-ci.org/liamcurry/passport-liamcurry)
+    $ npm install -g ava
+    $ ava
+
+
+[![Build Status](https://secure.travis-ci.org/mnzt/passport-steam.png)](http://travis-ci.org/mnzt/passport-steam)
 
 ## Contributors
 
   - [Jared Hanson](http://github.com/jaredhanson)
   - [elisee](https://github.com/elisee)
+  - [welps](https://github.com/welps)
+  - [mnzt](https://github.com/mnzt)
 
 ## License
 
