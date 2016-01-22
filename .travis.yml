@@ -2,7 +2,6 @@ language: node_js
 node_js:
 - 5.4.1
 - 4.2.4
-- '0.8'
 deploy:
   provider: npm
   email: "toby@nerdping.com"
