@@ -1,6 +1,6 @@
 {
   "name": "passport-steam",
-  "version": "0.1.6",
+  "version": "1.0.0",
   "description": "Steam (OpenID) authentication strategy for Passport.",
   "author": {
     "name": "Liam Curry",
