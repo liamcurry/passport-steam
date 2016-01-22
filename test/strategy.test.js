@@ -10,10 +10,14 @@ function getStrategy () {
   );
 }
 
-test('Strategy >> _providerURL', t => {
+test("Whether the providerURL is steam's", t => {
   t.same(getStrategy()._providerURL, 'http://steamcommunity.com/openid')
 });
 
-test('Strategy >> name', t => {
-  t.same(getStrategy().name, 'steam')
+test("Whether the strategy name is 'steam'", t => {
+  t.same(getStrategy()._name, 'steam')
+})
+
+test("Whether OpenID is statless", t => {
+  t.same(getStrategy()._stateless, true)
 })
