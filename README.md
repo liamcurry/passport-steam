@@ -65,7 +65,7 @@ If you would like to contribute, please provide accompanying tests with [AVA](ht
     $ ava
 
 
-[![Build Status](https://secure.travis-ci.org/mnzt/passport-steam.png)](http://travis-ci.org/mnzt/passport-steam)
+[![Build Status](https://secure.travis-ci.org/liamcurry/passport-steam.png)](http://travis-ci.org/liamcurry/passport-steam)
 
 ## Contributors
 
