@@ -1,20 +1,23 @@
 {
   "name": "passport-steam",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Steam (OpenID) authentication strategy for Passport.",
   "author": {
     "name": "Liam Curry",
     "email": "liam@curry.name",
     "url": "http://www.liamcurry.com/"
   },
-  "contributors": [{
-    "name": "Toby Archer",
-    "email": "toby@nerdping.com",
-    "url": "http://github.com/mnzt"
-  }, {
-    "name": "Welps",
-    "url": "https://github.com/welps"
-  }],
+  "contributors": [
+    {
+      "name": "Toby Archer",
+      "email": "toby@nerdping.com",
+      "url": "http://github.com/mnzt"
+    },
+    {
+      "name": "Welps",
+      "url": "https://github.com/welps"
+    }
+  ],
   "ava": {
     "failFast": true,
     "verbose": true
@@ -41,10 +44,12 @@
   "engines": {
     "node": ">= 0.4.0"
   },
-  "licenses": [{
-    "type": "MIT",
-    "url": "http://www.opensource.org/licenses/MIT"
-  }],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
   "keywords": [
     "passport",
     "steam",
