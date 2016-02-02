@@ -15,9 +15,9 @@ test("Whether the providerURL is steam's", t => {
 });
 
 test("Whether the strategy name is 'steam'", t => {
-  t.same(getStrategy()._name, 'steam')
+  t.same(getStrategy().name, 'steam')
 })
 
-test("Whether OpenID is statless", t => {
-  t.same(getStrategy()._stateless, true)
+test("Whether OpenID is stateless", t => {
+  t.same(getStrategy().stateless, true)
 })
