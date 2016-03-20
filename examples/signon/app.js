@@ -76,7 +76,7 @@ app.get('/logout', function(req, res){
 // GET /auth/steam
 //   Use passport.authenticate() as route middleware to authenticate the
 //   request.  The first step in Steam authentication will involve redirecting
-//   the user to steam.com.  After authenticating, Steam will redirect the
+//   the user to steamcommunity.com.  After authenticating, Steam will redirect the
 //   user back to this application at /auth/steam/return
 app.get('/auth/steam',
   passport.authenticate('steam', { failureRedirect: '/' }),
