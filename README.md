@@ -22,8 +22,8 @@ Additionally, options can be supplied to specify a return URL and realm.
         realm: 'http://localhost:3000/',
         apiKey: 'your steam API key'
       },
-      function(identifier, profile, done) {
-        User.findByOpenID({ openId: identifier }, function (err, user) {
+      function(profile, done) {
+        User.findByOpenID({ openId: profile.id }, function (err, user) {
           return done(err, user);
         });
       }
