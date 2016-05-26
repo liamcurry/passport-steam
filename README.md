@@ -6,7 +6,9 @@ with [Steam](http://steamcommunity.com/) using OpenID 2.0.
 
 ## Installation
 
-    $ npm install --save passport-steam
+```bash
+$ npm install --save passport-steam
+```
 
 ## Usage
 
@@ -17,17 +19,19 @@ which is also an OpenID 2.0 identifier.  The strategy requires a `validate`
 callback, which accepts this identifier and calls `done` providing a user.
 Additionally, options can be supplied to specify a return URL and realm.
 
-    passport.use(new SteamStrategy({
-        returnURL: 'http://localhost:3000/auth/steam/return',
-        realm: 'http://localhost:3000/',
-        apiKey: 'your steam API key'
-      },
-      function(identifier, profile, done) {
-        User.findByOpenID({ openId: identifier }, function (err, user) {
-          return done(err, user);
-        });
-      }
-    ));
+```javascript
+passport.use(new SteamStrategy({
+    returnURL: 'http://localhost:3000/auth/steam/return',
+    realm: 'http://localhost:3000/',
+    apiKey: 'your steam API key'
+  },
+  function(identifier, profile, done) {
+    User.findByOpenID({ openId: identifier }, function (err, user) {
+      return done(err, user);
+    });
+  }
+));
+```
 
 A Steam API key can be obtained at http://steamcommunity.com/dev/apikey. However if you wish not to use an API key, you can include `profile: false` into the SteamStrategy object, which will disable the fetching of user data.
 
@@ -39,19 +43,21 @@ authenticate requests.
 For example, as route middleware in an [Express](http://expressjs.com/)
 application:
 
-    app.get('/auth/steam',
-      passport.authenticate('steam'),
-      function(req, res) {
-        // The request will be redirected to Steam for authentication, so
-        // this function will not be called.
-      });
+```javascript
+app.get('/auth/steam',
+  passport.authenticate('steam'),
+  function(req, res) {
+    // The request will be redirected to Steam for authentication, so
+    // this function will not be called.
+  });
 
-    app.get('/auth/steam/return',
-      passport.authenticate('steam', { failureRedirect: '/login' }),
-      function(req, res) {
-        // Successful authentication, redirect home.
-        res.redirect('/');
-      });
+app.get('/auth/steam/return',
+  passport.authenticate('steam', { failureRedirect: '/login' }),
+  function(req, res) {
+    // Successful authentication, redirect home.
+    res.redirect('/');
+  });
+```
 
 ## Examples
 
@@ -61,9 +67,10 @@ For a complete, working example, refer to the [signon example](https://github.co
 
 If you would like to contribute, please provide accompanying tests with [AVA](https://github.com/sindresorhus/ava)
 
-    $ npm install -g ava
-    $ ava
-
+```bash
+$ npm install -g ava
+$ ava
+```
 
 [![Build Status](https://secure.travis-ci.org/liamcurry/passport-steam.png)](http://travis-ci.org/liamcurry/passport-steam)
 
