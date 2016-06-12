@@ -26,13 +26,9 @@ passport.deserializeUser(function(obj, done) {
 passport.use(new SteamStrategy({
     returnURL: 'http://localhost:3000/auth/steam/return',
     realm: 'http://localhost:3000/',
-    apiKey: 'Your API Key Here',
-    //passReqToCallback -- temporarily deprecated, since request is always returned.
+    apiKey: 'Your API Key Here'
   },
-  function(req, identifier, profile, done) {
-    if(req.query['openid.op_endpoint'] !== 'https://steamcommunity.com/openid/login') {
-      return done(null, false, { message: 'Claimed identity is invalid.' });
-    }
+  function( identifier, profile, done) {
     
     // asynchronous verification, for effect...
     process.nextTick(function () {
