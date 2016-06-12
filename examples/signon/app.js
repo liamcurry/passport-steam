@@ -27,7 +27,7 @@ passport.use(new SteamStrategy({
     returnURL: 'http://localhost:3000/auth/steam/return',
     realm: 'http://localhost:3000/',
     apiKey: 'Your API Key Here',
-    //passReqToCallback -- now deprecated, since request is always returned.
+    //passReqToCallback -- temporarily deprecated, since request is always returned.
   },
   function(req, identifier, profile, done) {
     if(req.query['openid.op_endpoint'] !== 'https://steamcommunity.com/openid/login') {
