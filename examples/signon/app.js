@@ -26,12 +26,11 @@ passport.deserializeUser(function(obj, done) {
 passport.use(new SteamStrategy({
     returnURL: 'http://localhost:3000/auth/steam/return',
     realm: 'http://localhost:3000/',
-    apiKey: 'Your API key here'
+    apiKey: 'Your API Key Here'
   },
-  function(identifier, profile, done) {
+  function(req, identifier, profile, done) {
     // asynchronous verification, for effect...
     process.nextTick(function () {
-
       // To keep the example simple, the user's Steam profile is returned to
       // represent the logged-in user.  In a typical application, you would want
       // to associate the Steam account with a user record in your database,
@@ -41,7 +40,6 @@ passport.use(new SteamStrategy({
     });
   }
 ));
-
 var app = express();
 
 // configure Express
