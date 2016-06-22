@@ -61,7 +61,7 @@ app.get('/auth/steam/return',
 
 ## Examples
 
-For a complete, working example, refer to the [signon example](https://github.com/liamcurry/passport-steam/tree/master/examples/signon).
+For a complete, working example, refer to the [signon example](https://github.com/liamcurry/passport-steam/tree/master/examples/signon). Do not forget to add your API key.
 
 ## Tests
 

@@ -2,7 +2,7 @@ var express = require('express')
   , passport = require('passport')
   , util = require('util')
   , session = require('express-session')
-  , SteamStrategy = require('passport-steam').Strategy;
+  , SteamStrategy = require('../../').Strategy;
 
 // Passport session setup.
 //   To support persistent login sessions, Passport needs to be able to
