@@ -61,7 +61,39 @@ app.get('/auth/steam/return',
 
 ## Examples
 
-For a complete, working example, refer to the [signon example](https://github.com/liamcurry/passport-steam/tree/master/examples/signon). Do not forget to add your API key.
+For a complete, working example, refer to the [signon example](https://github.com/liamcurry/passport-steam/tree/master/examples/signon) or follow the steps below. Do not forget to add your API key.
+
+To run the example, you can perform the following from the command line:
+
+1. Clone the repository
+
+    ```git clone https://github.com/scholtzm/passport-steam.git```
+
+2. Go into the repository
+
+    ```cd passport-steam```
+
+3. Download the required dependencies
+
+    ```npm install```
+
+4. Edit `examples/signon/app.js` with your favorite text editor
+5. Update the `localhost` parameter and add your API key in this block within `examples/signon/app.js`
+
+    ```
+    returnURL: 'http://localhost:3000/auth/steam/return',
+        realm: 'http://localhost:3000/',
+        apiKey: 'Your API key here'
+    ```
+
+6. Save your changes to `examples/signon/app.js`
+7. Start the example
+
+    ```
+    npm run example
+    ```
+    
+8. Go to the address you put in `realm` in your browser.
 
 ## Tests
 
