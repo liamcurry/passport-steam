@@ -67,7 +67,7 @@ To run the example, you can perform the following from the command line:
 
 1. Clone the repository
 
-    ```git clone https://github.com/scholtzm/passport-steam.git```
+    ```git clone https://github.com/liamcurry/passport-steam.git```
 
 2. Go into the repository
 
@@ -112,6 +112,8 @@ $ ava
   - [elisee](https://github.com/elisee)
   - [welps](https://github.com/welps)
   - [mnzt](https://github.com/mnzt)
+  - [scholtzm](https://github.com/scholtzm)
+
 
 ## License
 
