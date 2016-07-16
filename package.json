@@ -44,7 +44,8 @@
   },
   "scripts": {
     "test": "ava test/*.test.js",
-    "example": "node examples/signon/app.js"
+    "example": "node examples/signon/app.js",
+    "example-router": "node examples/signon/app-router.js"
   },
   "engines": {
     "node": ">= 0.4.0"

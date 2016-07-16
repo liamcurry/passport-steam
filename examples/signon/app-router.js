@@ -1,11 +1,13 @@
 /**
  * Basic example demonstrating passport-steam usage within Express framework
+ * This example uses Express's router to separate the steam authentication routes
  */
 var express = require('express')
   , passport = require('passport')
   , util = require('util')
   , session = require('express-session')
-  , SteamStrategy = require('../../').Strategy;
+  , SteamStrategy = require('../../').Strategy
+  , authRoutes = require('./routes/auth');
 
 // Passport session setup.
 //   To support persistent login sessions, Passport needs to be able to
@@ -76,27 +78,8 @@ app.get('/logout', function(req, res){
   res.redirect('/');
 });
 
-// GET /auth/steam
-//   Use passport.authenticate() as route middleware to authenticate the
-//   request.  The first step in Steam authentication will involve redirecting
-//   the user to steamcommunity.com.  After authenticating, Steam will redirect the
-//   user back to this application at /auth/steam/return
-app.get('/auth/steam',
-  passport.authenticate('steam', { failureRedirect: '/' }),
-  function(req, res) {
-    res.redirect('/');
-  });
-
-// GET /auth/steam/return
-//   Use passport.authenticate() as route middleware to authenticate the
-//   request.  If authentication fails, the user will be redirected back to the
-//   login page.  Otherwise, the primary route function function will be called,
-//   which, in this example, will redirect the user to the home page.
-app.get('/auth/steam/return',
-  passport.authenticate('steam', { failureRedirect: '/' }),
-  function(req, res) {
-    res.redirect('/');
-  });
+// See views/auth.js for authentication routes
+app.use('/auth', authRoutes);
 
 app.listen(3000);
 
