@@ -33,7 +33,7 @@
   "dependencies": {
     "pkginfo": "*",
     "passport-openid-node6support": "^1.0.0",
-    "steam-web": "~0.2.4"
+    "steam-web": "0.3.0"
   },
   "devDependencies": {
     "ava": "^0.10.0",
