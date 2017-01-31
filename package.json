@@ -32,7 +32,7 @@
   "main": "./lib/passport-steam",
   "dependencies": {
     "pkginfo": "*",
-    "passport-openid": "^0.x",
+    "passport-openid": "^0.4.0",
     "steam-web": "0.3.0"
   },
   "devDependencies": {
