@@ -11,7 +11,7 @@ function getStrategy () {
 }
 
 test("Whether the providerURL is steam's", t => {
-  t.same(getStrategy()._providerURL, 'http://steamcommunity.com/openid')
+  t.same(getStrategy()._providerURL, 'https://steamcommunity.com/openid')
 });
 
 test("Whether the strategy name is 'steam'", t => {
