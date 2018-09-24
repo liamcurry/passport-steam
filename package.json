@@ -1,17 +1,21 @@
 {
-  "name": "passport-steam",
-  "version": "1.0.10",
-  "description": "Steam (OpenID) authentication strategy for Passport.",
+  "name": "passport-steam-openid2",
+  "version": "1.0.11",
+  "description": "Steam (OpenID 2) authentication strategy for PassportJS.",
   "author": {
-    "name": "Liam Curry",
-    "email": "liam@curry.name",
-    "url": "http://www.liamcurry.com/"
+    "name": "Dilame Bowzee",
+    "email": "dilame.nickolson@gmail.com"
   },
   "contributors": [
     {
       "name": "Toby Archer",
       "email": "toby@nerdping.com",
       "url": "http://github.com/mnzt"
+    },
+    {
+      "name": "Liam Curry",
+      "email": "liam@curry.name",
+      "url": "http://www.liamcurry.com/"
     },
     {
       "name": "Welps",
@@ -24,14 +28,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/liamcurry/passport-steam.git"
+    "url": "git://github.com/dilame/passport-steam-openid2.git"
   },
   "bugs": {
-    "url": "http://github.com/liamcurry/passport-steam/issues"
+    "url": "http://github.com/dilame/passport-steam-openid2/issues"
   },
   "main": "./lib/passport-steam",
   "dependencies": {
-    "passport-openid": "^0.4.0",
+    "@passport-next/passport-openid": "^1.0.0",
     "steam-web": "0.4.0"
   },
   "devDependencies": {
