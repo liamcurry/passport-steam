@@ -1,5 +1,5 @@
 {
-  "name": "passport-steam-openid2",
+  "name": "passport-steam",
   "version": "1.0.11",
   "description": "Steam (OpenID 2) authentication strategy for PassportJS.",
   "author": {
