@@ -24,10 +24,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/liamcurry/passport-steam.git"
+    "url": "https://github.com/liamcurry/passport-steam.git"
   },
   "bugs": {
-    "url": "http://github.com/liamcurry/passport-steam/issues"
+    "url": "https://github.com/liamcurry/passport-steam/issues"
   },
   "main": "./lib/passport-steam",
   "dependencies": {
